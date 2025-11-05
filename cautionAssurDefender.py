@@ -39,8 +39,8 @@ set_french_locale()
 # ============================
 @st.cache_resource
 def init_supabase_client():
-    url = st.secrets["https://xabklcnwvlteldfukwgh.supabase.co"]
-    key = st.secrets["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhYmtsY253dmx0ZWxkZnVrd2doIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIzMzg2NjYsImV4cCI6MjA3NzkxNDY2Nn0.anB7Dhj8ucPIG1arHp_LJCE7Eq6g0-kR9CmhiFOdESU"]
+    url = st.secrets["SUPABASE_URL"]
+    key = st.secrets["SUPABASE_ANON_KEY"]
     return create_client(url, key)
 
 supabase: Client = init_supabase_client()
